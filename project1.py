@@ -1,3 +1,4 @@
+# CS 323 Data Privacy Project 1
 import pandas as pd
 
 filename = "ObesityDataSet_raw_and_data_sinthetic.csv"
