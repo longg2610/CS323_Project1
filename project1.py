@@ -35,3 +35,17 @@ def generalize_MTRANS(x):
     
 df_qi["MTRANS_gen"] = df_qi["MTRANS"].map(generalize_MTRANS)
 print(df_qi["MTRANS_gen"].head())
+
+# Checking equivalence class
+eq_cols = ["FCVC_gen", "CAEC_gen", "MTRANS_gen"]
+
+eq_sizes = (
+    df_qi
+    .groupby(eq_cols)
+    .size()
+    .reset_index(name="count")
+    .sort_values("count")
+)
+
+# now, k = 3
+print(eq_sizes.head())
