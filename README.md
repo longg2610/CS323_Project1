@@ -1,3 +1,3 @@
 # CS323_Project1
-To reproduce the anonymized data, run python anonymize.py, and input the desired k-value
-The values of k used were 2, 15, and 45. The QIDs age, height, and weight were used because a combination of these three can identify a person relatively easily. They are also continuous, which makes generalization a good choice because one can further generalize the ranges until only one class is left. Utility was measured using a generalization lattice, the code generalizes with a max depth (max generalization step) of 3. The discernability penalty is calculated for each node in the lattice, and the lowest penalty is chosen to be the penalty of the k-value.
+To reproduce the anonymized data, run python anonymize.py, and input the desired k-value in the prompt
+The raw data is in ./ObesityDataSet_raw_and_data_sinthetic.csv, the output will be loaded into output.csv
